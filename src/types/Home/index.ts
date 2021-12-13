@@ -1,6 +1,6 @@
-import { PokemonType } from 'types/Pokemon';
+import { AllPokemonsProps } from 'types/Pokemon';
 
 export type Props = {
   count?: number;
-  pokemons?: PokemonType[];
+  pokemons?: AllPokemonsProps[];
 };

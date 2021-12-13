@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 
 import { Props } from 'types/Home';
-import { PokemonType } from 'types/Pokemon';
+import { AllPokemonsProps } from 'types/Pokemon';
 import { getAllPokemons } from 'services/pokemon';
 
 const Home = (props: Props) => {
@@ -11,7 +11,7 @@ const Home = (props: Props) => {
       <h1>TODOS OS POKEMONS</h1>
 
       {props?.pokemons &&
-        props?.pokemons.map((pokemon: PokemonType) => (
+        props?.pokemons.map((pokemon: AllPokemonsProps) => (
           <div key={pokemon.entry_number}>
             <Link href={`/pokemon/${pokemon.entry_number}`}>
               <a>{pokemon.pokemon_species.name}</a>
